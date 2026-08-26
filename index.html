@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitor - Full Stack Developer</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark-custom text-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navbar fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-fira fw-bold text-primary-custom fs-3" href="#home" data-i18n="nav_brand">&lt;Programador/&gt;</a>
+            <button class="navbar-toggler border-primary-custom text-primary-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#home" data-i18n="nav_home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#about" data-i18n="nav_about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#contacts" data-i18n="nav_contacts">Contatos</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button id="langToggle" class="btn btn-outline-primary-custom btn-sm rounded-pill px-3">
+                            <i class="bi bi-globe me-1"></i> <span id="currentLang">EN</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-vh-100 d-flex align-items-center pt-5 position-relative overflow-hidden">
+        <canvas id="matrixCanvas" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; opacity: 0.25;"></canvas>
+        <div class="container position-relative z-index-1">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 text-center text-lg-start mt-5 mt-lg-0 z-index-1">
+                    <h1 class="display-3 fw-bold font-poppins text-white mb-2">Vitor</h1>
+                    <h2 class="display-5 fw-semibold text-primary-custom mb-4 font-poppins" data-i18n="hero_title">Full Stack Developer</h2>
+                    <p class="lead mb-5 text-secondary-custom font-poppins pe-lg-5" data-i18n="hero_subtitle">
+                        Criando soluções completas, código criativo e experiências excepcionais.
+                    </p>
+                    <a href="#about" class="btn btn-primary-custom btn-lg font-poppins px-5 rounded-pill shadow-primary" data-i18n="nav_about">Sobre mim</a>
+                </div>
+                <div class="col-lg-6 text-center position-relative">
+                    <div class="large-profile-img-container mx-auto position-relative">
+                        <img src="assets/profile.png" alt="Vitor" class="img-fluid large-profile-img drop-shadow-custom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-dark-alt min-vh-100 d-flex align-items-center">
+        <div class="container py-5">
+            <h2 class="text-center font-poppins fw-bold mb-5 display-6"><span class="text-primary-custom font-fira">#</span> <span data-i18n="about_title">Sobre mim</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center text-lg-start fs-5 font-poppins text-secondary-custom lh-lg">
+                    <p data-i18n="about_p1" class="text-white">Olá! Me chamo Vitor.</p>
+                    <p data-i18n="about_p2">Sou programador Full Stack focado em HTML, CSS, JavaScript e Python, e atualmente curso Análise e Desenvolvimento de Sistemas no IFSP Guarulhos.</p>
+                    <p data-i18n="about_p3">Gosto de resolver problemas com código e IA estou em busca da minha próxima oportunidade para crescer como desenvolvedor e contribuir com projetos desafiadores.</p>
+                    
+                    <div class="mt-5 pt-3 border-top border-secondary border-opacity-25 text-center">
+                        <p class="font-fira fs-6 text-uppercase tracking-wider mb-4" data-i18n="tech_stack">Stack Tecnológica</p>
+                        <div class="tech-stack d-flex justify-content-center flex-wrap gap-4">
+                            <div class="tech-icon-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"></div>
+                            <div class="tech-icon-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"></div>
+                            <div class="tech-icon-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+                            <div class="tech-icon-img"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts" class="py-5 min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+        <canvas id="contactsMatrixCanvas" class="position-absolute top-0 start-0 w-100 h-100" style="z-index: 0; opacity: 0; pointer-events: none; transition: opacity 0.5s ease;"></canvas>
+        <div id="github-rain-container" class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden" style="z-index: 0; pointer-events: none; opacity: 0; transition: opacity 0.5s ease;"></div>
+        <div class="glow-bg" id="contacts-glow"></div>
+        <div class="container py-5 z-index-1">
+            <h2 class="text-center font-poppins fw-bold mb-5 display-6"><span class="text-primary-custom font-fira">#</span> <span data-i18n="contact_title">Contatos</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-dark-navbar border-primary-custom p-5 shadow-custom text-center rounded-4" style="transition: all 0.3s ease;" id="contacts-card">
+                        <div class="card-body">
+                            <div class="mb-5">
+                                <div class="avatar-sm mx-auto mb-3">
+                                    <i class="bi bi-display-fill fs-2 text-white"></i>
+                                </div>
+                                <h3 class="font-poppins text-white fw-bold" data-i18n="contact_name">Vitor Igor dos Santos</h3>
+                                <p class="text-primary-custom font-fira mb-0">Full Stack Developer</p>
+                            </div>
+                            
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-4 mt-4">
+                                <a href="https://wa.me/5511946750795" target="_blank" class="contact-link w-100" id="whatsapp-link">
+                                    <div class="contact-item p-4 border rounded-4 border-secondary border-opacity-25 d-flex flex-column align-items-center">
+                                        <i class="bi bi-whatsapp fs-1 text-success mb-3"></i>
+                                        <span class="text-secondary-custom font-poppins fs-6 mb-1">WhatsApp</span>
+                                        <span class="mb-0 fs-5 font-fira text-light" data-i18n="contact_phone">+55 11 94675-0795</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://github.com/VitorCreatorSWE" target="_blank" class="contact-link w-100" id="github-link">
+                                    <div class="contact-item p-4 border rounded-4 border-secondary border-opacity-25 d-flex flex-column align-items-center">
+                                        <i class="bi bi-github fs-1 text-white mb-3"></i>
+                                        <span class="text-secondary-custom font-poppins fs-6 mb-1">GitHub</span>
+                                        <span class="mb-0 fs-5 font-fira text-light">VitorCreatorSWE</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center bg-dark-navbar text-secondary-custom font-fira border-top border-secondary border-opacity-25">
+        <div class="container">
+            <p class="mb-0">© 2026 Vitor Igor dos Santos.</p>
+            <p class="mb-0 mt-1 small opacity-75" data-i18n="footer_text">Feito com HTML, CSS, JS & Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
